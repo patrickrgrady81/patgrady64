@@ -120,7 +120,7 @@ body{
 @media only screen and (max-width: 1145px){
     .logo{
         font-size: 4rem;
-        top: 15vh;
+        top: 5vh;
     }
 
     .slide{
@@ -145,9 +145,9 @@ body{
 }
 
 @media only screen and (max-width: 930px){
-    .logo{
+    /* .logo{
         top: 17vh;
-    }
+    } */
 
     .slide{
         height: 8rem;
@@ -162,27 +162,35 @@ body{
 @media only screen and (max-width: 750px){
     .logo{
         font-size: 3rem;
-        top: 19vh;
+        /* top: 19vh; */
     }
 }
 
 @media only screen and (max-width: 570px){
     .logo{
-        font-size: 2.3rem;
-        top: 20vh;
+        /* font-size: 2.3rem; */
+        /* top: 6vh; */
         left: 52vw;
         
     }
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 480px){
     .logo{
         font-size: 1.7rem;
-        top: 20vh;
+        /* top: 20vh; */
         left: 52vw;
     }
 
-    .about {
-        left: 50vw;
+    .projects, .about{
+        left: 52vw;
+    }
+
+    .projects{
+        top: 12vh;
+    }
+
+    .about{
+        top: 24vh
     }
 }
