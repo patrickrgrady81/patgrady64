@@ -2,6 +2,17 @@
 
 :root {
   --main-bg-color: #82D5FB;
+  --font-color: rgb(240, 240, 240);
+  --hover-color: #b9eec4;
+  --border-color: #4C6371;
+
+}
+
+body{
+    background-color: var(--main-bg-color);
+    display: relative;
+    height: 200vh;
+    overflow-x: hidden;
 }
 
 .guy{
@@ -18,13 +29,8 @@
     position: relative;
 }
 
-body{
-    background-color: var(--main-bg-color);
-    display: relative;
-}
-
 .logo{
-    color: white;
+    color: var(--font-color);
     position: absolute;
     top: 11vh;
     left: 55vw;
@@ -51,6 +57,50 @@ body{
     /* animation-iteration-count: infinite; */
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.projects{
+    position: absolute;
+    top: 22vh;
+    left: 1.7vw;
+    color: var(--font-color);
+    font-size: 3rem;
+    border-right: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 8px;
+    padding: 20px 20px;
+}
+
+.projects:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+    padding: 18px 18px;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.about{
+    position: absolute;
+    top: 44vh;
+    left: 2.9vw;
+    color: var(--font-color);
+    font-size: 3rem;
+    border-right: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 8px;
+    padding: 20px 20px;
+}
+
+.about:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+    padding: 18px 18px;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
 }
 
 @keyframes slidein {
