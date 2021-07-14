@@ -50,26 +50,26 @@ const main = (e) => {
         aboutPage.scrollIntoView({behavior: 'smooth'});
     })
 
-    // let cardFront = document.querySelector('.card-front');
-    // for (let i = 0; i < data.length; i++){
+    let cardFront = document.querySelector('.card-front');
+    for (let i = 0; i < data.length; i++){
 
-    //   // Create Front of the Card
-    //   const frontDiv = document.createElement('div');
-    //   const img = document.createElement('img');
-    //   const title = document.createElement('h1');
+      // Create Front of the Card
+      const frontDiv = document.createElement('div');
+      const img = document.createElement('img');
+      const title = document.createElement('h1');
 
-    //   frontDiv.classList.add('front-parent');
+      frontDiv.classList.add('front-parent');
       
-    //   img.src  = `../assets/${data[i].image}`;
-    //   img.classList.add('front-image');
+      img.src  = `../assets/${data[i].image}`;
+      img.classList.add('front-image');
 
-    //   title.innerHTML = data[i].name;
-    //   title.classList.add('front-title');
+      title.innerHTML = data[i].name;
+      title.classList.add('front-title');
 
-    //   frontDiv.appendChild(title);
-    //   frontDiv.appendChild(img);
-    //   cardFront.appendChild(frontDiv)
-    // }
+      frontDiv.appendChild(title);
+      frontDiv.appendChild(img);
+      cardFront.appendChild(frontDiv)
+    }
 
     //   // Create Back of the Card
     // const cardBack = document.querySelector('.card-back');
