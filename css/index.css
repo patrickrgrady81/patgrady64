@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 :root {
-  --main-bg-color: 130, 213, 251;
+  --main-bg-color: rgb(130, 213, 251);
   --second-bg-color: #60cdff;
   --main-font-color: #017ab3;
   /* --second-font-color: rgb(240, 240, 240); */
@@ -15,9 +15,9 @@
 body{
     
     /* background-image: url('./assets/bg2.jpg'); */
-    background-color: rgba(var(--main-bg-color));
+    background-color: var(--main-bg-color);
     display: relative;
-    /* height: 200vh; */
+    /* height: 100vh; */
     overflow-x: hidden;
 }
 
@@ -30,7 +30,7 @@ body{
     height: 97vh;
     object-fit: cover;
     position: relative;
-    opacity: 0.7;
+    /* opacity: 0.6; */
 }
 
 .desktop{
@@ -60,25 +60,15 @@ body{
     font-family: 'Dosis', sans-serif;
     font-size: 2rem;
     opacity: 0.6;
+    white-space: nowrap;
+}
+
+.logo, .title{
+    animation: 1.1s forwards linear reveal;
 }
 
 .slide-parent{
     position: relative;
-}
-
-.slide{
-    position: absolute;
-    top: 12vh;
-    left: 94vh;
-    /* border: 3px solid red; */
-    width: 31rem;
-    height: 7rem;
-    background-color: var(--main-bg-color);
-    z-index: 2;
-    animation: slidein 2s linear;
-    /* animation-iteration-count: infinite; */
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
 
 .projects{
@@ -90,7 +80,7 @@ body{
 .about{
     position: absolute;
     top: 44vh;
-    left: 2.3vw;
+    left: 3.1vw;
 }
 
 .projects, .about {
@@ -106,6 +96,7 @@ body{
     /* background-image: linear-gradient(var(--second-bg-color), #002eac); */
     /* background: linear-gradient(169deg, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%); */
     background: radial-gradient(circle, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%);
+    animation: 1s forwards linear rise;
 
 }
 
@@ -119,6 +110,8 @@ body{
 }
 
 .projects-page{
+    margin-top: 2rem;
+    padding-top: 2rem;
     height: 100vh;
     background-image: linear-gradient(var(--main-bg-color), #a9ffc6);
 }
@@ -127,28 +120,79 @@ body{
     height: 100vh;
     background-image: linear-gradient(#a9ffc6, #f7ffae);
 }
+/* 
+.front-image {
+    height: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    max-width: 500px;
+} */
+/* 
+.front-title, .back-title{
+    font-size: 2rem;
+    text-align: center;
+}
 
-@keyframes slidein {
+.card-content:hover .card-front {
+    transform: rotateY(.5turn);
+}
 
-  to {
-    left: 99%;
-  }
+.card-content{
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    transition: transform 3s;
+} */
+
+/* 
+.card-front, .card-back{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px 10px;
+    flex-wrap: wrap;
+} 
+
+.card-back{
+    min-width: 500px;
+}
+
+.front-parent, .back-parent{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    max-width: 400px;
+    min-height: 300px;
+    color: black;
+    box-shadow: 10px 10px 15px 5px #000000;
+} */
+
+@keyframes reveal {
+    from {
+        left: 120vw;
+    }
+}
+
+@keyframes rise {
+    from {
+        top: 100vh;
+    }
 }
 
 @media only screen and (max-width: 1200px){
     .projects, .about {
-        left: 2%;
         font-size: 2rem;
     }
-}
+    .projects{
+        left: 2vw;
+    }
 
-/* @media only screen and (max-width: 1196) {
-    .title{
-        top: 14vh;
-        left: 56vw;
-        font-size: 1.5rem;
-    }    
-} */
+    .about{
+        left: 3vw;
+    }
+}
 
 @media only screen and (max-width: 1145px){
     .logo{
@@ -176,17 +220,8 @@ body{
         left: 56vw;
     }
 }
-@media only screen and (max-width: 930px){
-    .projects, .about {
-        left: 2%;
-    }
-}
 
 @media only screen and (max-width: 930px){
-    /* .logo{
-        top: 17vh;
-    } */
-
     .slide{
         height: 8rem;
         left: 45vw;
@@ -194,6 +229,10 @@ body{
 
     .about {
         left: 30vw;
+    }
+     
+    .projects, .about {
+        left: 2%;
     }
 }
 
@@ -231,7 +270,8 @@ body{
     }
 
     .about{
-        top: 24vh
+        top: 24vh;
+        left: 67vw;
     }
 
     .title{
