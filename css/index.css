@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 :root {
-  --main-bg-color: #82D5FB;
-  --font-color: rgb(240, 240, 240);
+  --main-bg-color: 130, 213, 251;
+  --second-bg-color: #60cdff;
+  --main-font-color: #017ab3;
+  /* --second-font-color: rgb(240, 240, 240); */
+  --second-font-color: rgb(255, 202, 202);
   --hover-color: #b9eec4;
   --border-color: #4C6371;
 
 }
 
 body{
-    background-color: var(--main-bg-color);
+    
+    /* background-image: url('./assets/bg2.jpg'); */
+    background-color: rgba(var(--main-bg-color));
     display: relative;
-    height: 200vh;
+    /* height: 200vh; */
     overflow-x: hidden;
+}
+
+.home{
+    height: 100vh;
 }
 
 .guy{
@@ -20,6 +30,7 @@ body{
     height: 97vh;
     object-fit: cover;
     position: relative;
+    opacity: 0.7;
 }
 
 .desktop{
@@ -30,7 +41,7 @@ body{
 }
 
 .logo{
-    color: var(--font-color);
+    color: var(--main-font-color);
     position: absolute;
     top: 11vh;
     left: 55vw;
@@ -40,6 +51,17 @@ body{
     overflow: hidden;
     white-space: nowrap;
 }
+
+.title{
+    color: var(--main-font-color);
+    position: absolute;
+    top: 27vh;
+    left: 61vw;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    opacity: 0.6;
+}
+
 .slide-parent{
     position: relative;
 }
@@ -60,47 +82,50 @@ body{
 }
 
 .projects{
-    position: absolute;
     top: 22vh;
     left: 1.7vw;
-    color: var(--font-color);
-    font-size: 3rem;
-    border-right: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-radius: 8px;
-    padding: 20px 20px;
 }
 
-.projects:hover {
-    color: var(--hover-color);
-    cursor: pointer;
-    padding: 18px 18px;
-    border-bottom: 2px solid var(--border-color);
-    border-right: 2px solid var(--border-color);
-}
 
 .about{
     position: absolute;
     top: 44vh;
-    left: 1.7vw;
-    color: var(--font-color);
+    left: 2.3vw;
+}
+
+.projects, .about {
+    position: absolute;
+    color: var(--second-font-color);
     font-size: 3rem;
-    border-right: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
+    box-shadow: 15px 5px 15px 5px #000000;
     border-left: 1px solid white;
     border-top: 1px solid white;
     border-radius: 8px;
+    color: rgb(77, 77, 77);
     padding: 20px 20px;
+    /* background-image: linear-gradient(var(--second-bg-color), #002eac); */
+    /* background: linear-gradient(169deg, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%); */
+    background: radial-gradient(circle, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%);
+
 }
 
-.about:hover {
+.projects:hover, .about:hover{
     color: var(--hover-color);
     cursor: pointer;
     padding: 18px 18px;
     border-bottom: 2px solid var(--border-color);
     border-right: 2px solid var(--border-color);
+    box-shadow: 3px 5px 15px -1px #000000;
+}
+
+.projects-page{
+    height: 100vh;
+    background-image: linear-gradient(var(--main-bg-color), #a9ffc6);
+}
+
+.about-page{
+    height: 100vh;
+    background-image: linear-gradient(#a9ffc6, #f7ffae);
 }
 
 @keyframes slidein {
@@ -116,6 +141,14 @@ body{
         font-size: 2rem;
     }
 }
+
+/* @media only screen and (max-width: 1196) {
+    .title{
+        top: 14vh;
+        left: 56vw;
+        font-size: 1.5rem;
+    }    
+} */
 
 @media only screen and (max-width: 1145px){
     .logo{
@@ -136,6 +169,11 @@ body{
 
     .about {
         left: 20vw;
+    }
+
+    .title{
+        top: 17vh;
+        left: 56vw;
     }
 }
 @media only screen and (max-width: 930px){
@@ -162,35 +200,43 @@ body{
 @media only screen and (max-width: 750px){
     .logo{
         font-size: 3rem;
-        /* top: 19vh; */
+    }
+
+    .title{
+        top: 15vh;
+        left: 56vw;
+        font-size: 1.4rem;
     }
 }
 
 @media only screen and (max-width: 570px){
     .logo{
-        /* font-size: 2.3rem; */
-        /* top: 6vh; */
         left: 52vw;
-        
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 512px){
     .logo{
-        font-size: 1.7rem;
-        /* top: 20vh; */
-        left: 52vw;
+        font-size: 2.5rem;
+        top: 3vh;
+        left: 10vw;
     }
 
     .projects, .about{
-        left: 52vw;
+        left: 65vw;
     }
 
     .projects{
-        top: 12vh;
+        top: 10vh;
     }
 
     .about{
         top: 24vh
+    }
+
+    .title{
+        font-size: 1.3rem;
+        top: 11vh;
+        left: 10vw;
     }
 }
