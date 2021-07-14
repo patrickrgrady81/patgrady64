@@ -126,6 +126,15 @@ body{
     border: 1px solid black;
     border-collapse: collapse;
     max-width: 500px;
+    aspect-ratio: 16 / 9;    
+}
+
+.front-parent{
+    transition: transform 3s;
+}
+
+.front-parent:hover{
+    transform: rotateY(.5turn);
 }
 
 .front-title {
