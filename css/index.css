@@ -5,24 +5,23 @@
   --main-bg-color: rgb(130, 213, 251);
   --second-bg-color: #60cdff;
   --main-font-color: #017ab3;
-  /* --second-font-color: rgb(240, 240, 240); */
   --second-font-color: rgb(255, 202, 202);
   --hover-color: #b9eec4;
   --border-color: #4C6371;
+  --mid-gradient: #a9ffc6;
+  --end-gradient: #f7ffae;
 
 }
 
 body{
     
-    /* background-image: url('./assets/bg2.jpg'); */
     background-color: var(--main-bg-color);
     display: relative;
-    /* height: 100vh; */
     overflow-x: hidden;
 }
 
 .home{
-    height: 100vh;
+    min-height: 10vh;
 }
 
 .guy{
@@ -30,7 +29,6 @@ body{
     height: 97vh;
     object-fit: cover;
     position: relative;
-    /* opacity: 0.6; */
 }
 
 .desktop{
@@ -93,32 +91,32 @@ body{
     border-radius: 8px;
     color: rgb(77, 77, 77);
     padding: 20px 20px;
-    /* background-image: linear-gradient(var(--second-bg-color), #002eac); */
-    /* background: linear-gradient(169deg, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%); */
     background: radial-gradient(circle, rgba(108,197,237,1) 0%, rgba(34,145,196,0.7122199221485469) 41%, rgba(0,130,255,1) 100%);
-    animation: 1s forwards linear rise;
+    animation: 2s forwards linear rise;
 
 }
 
-.projects:hover, .about:hover{
+.projects:hover, .about:hover, .projects:active, .about:active{
     color: var(--hover-color);
     cursor: pointer;
     padding: 18px 18px;
     border-bottom: 2px solid var(--border-color);
     border-right: 2px solid var(--border-color);
-    box-shadow: 3px 5px 15px -1px #000000;
+    box-shadow: 3px 5px 15px -1px black;
 }
 
 .projects-page{
     margin-top: 2rem;
     padding-top: 2rem;
-    height: 100vh;
-    background-image: linear-gradient(var(--main-bg-color), #a9ffc6);
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-image: linear-gradient(var(--main-bg-color), var(--mid-gradient));
 }
 
 .about-page{
-    height: 100vh;
-    background-image: linear-gradient(#a9ffc6, #f7ffae);
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-image: linear-gradient(var(--mid-gradient), var(--end-gradient));
 }
 
 .front-image {
@@ -133,7 +131,7 @@ body{
     transition: transform 3s;
 }
 
-.front-parent:hover{
+.front-parent:hover, front-parent:active{
     transform: rotateY(.5turn);
 }
 
@@ -222,8 +220,8 @@ body{
         left: 30vw;
     }
      
-    .projects, .about {
-        left: 2%;
+    .projects {
+        left: 2vw;
     }
 }
 
