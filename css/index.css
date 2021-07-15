@@ -22,10 +22,6 @@ body{
     overflow-x: hidden;
 }
 
-.home{
-    min-height: 10vh;
-}
-
 .guy{
     width: 100vw;
     height: 97vh;
