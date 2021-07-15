@@ -47,7 +47,7 @@ const data = [
     idName: "Novel",
     name: "Novel Ideas",
     briefDesc: "Book App",
-    fullDescription: "Search , save, and chat about books. Save books to your profile for later viewing. See descriptions of books. Use the built in forums to discuss, share and review books.",
+    fullDescription: "Search , save and chat about books. Save books to your profile for later viewing. See descriptions of books. Use the built in forums to discuss, share and review books.",
     languages: ["Ruby on Rails"],
     demoBack: "https://novel-ideas.herokuapp.com/",
     demoFront: null,
