@@ -19,16 +19,28 @@ body{
     
     background-color: var(--main-bg-color);
     display: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+
+.hamburger {
+    display: none;
+    margin: 20px 20px 0 20px;
+    border: 1px solid var(--main-bg-color);
+    cursor: pointer;
+}
+
+.hamburger-nav {
+    display: none;
+}
+
+.bar {
+    background: var(--main-font-color);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
 }
 
 .main-wrapper {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    overflow: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -310,49 +322,72 @@ body{
     .projects-page {
         height: 300vh;
     }
-}
 
-@media only screen and (max-width: 750px){
+    .title, .projects, .about {
+    display: none;
+    }
+
+    .home {
+        margin-top: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .show .hamburger-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: content;
+    }
+
+    .show .hamburger-nav a:hover, .hamburger-nav:hover {
+        font-size: 1.2em;
+        color: var(--main-font-color);
+    }
+
+    .hamburger-nav a {
+        text-decoration: none;
+        color: var(--main-font-color);
+        margin-right: 20px;
+    }
+    .hamburger-nav li {
+        padding-top: 5px;
+        font-size: 2rem;
+    }
+
+    .bar {
+        margin-bottom: 2px;
+        transition: 0.5s ease-out;
+    }
+
     .logo{
-        font-size: 3rem;
+        left: 5vw;
+        top: 1vh;
     }
 
-    .title{
-        top: 15vh;
-        left: 56vw;
-        font-size: 1.4rem;
-    }
-}
-
-@media only screen and (max-width: 570px){
-    .logo{
-        left: 52vw;
-    }
-}
-
-@media only screen and (max-width: 512px){
-    .logo{
-        font-size: 2.5rem;
-        top: 3vh;
-        left: 10vw;
+    .switch .bar {
+        background: var(--main-font-color);
     }
 
-    .projects, .about{
-        left: 65vw;
+    .switch #bar3 {
+        transform: scale(0);
     }
 
-    .projects{
-        top: 10vh;
+    .switch #bar1 {
+        transform: translateY(8px) rotateZ(45deg);
+        z-index: 1;
     }
 
-    .about{
-        top: 24vh;
-        left: 67vw;
-    }
-
-    .title{
-        font-size: 1.3rem;
-        top: 11vh;
-        left: 10vw;
+    .switch #bar2 {
+        transform: rotateZ(-45deg);
+        z-index: 2;
     }
 }
