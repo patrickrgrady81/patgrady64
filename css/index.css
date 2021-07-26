@@ -103,13 +103,14 @@ body{
     margin-top: 2rem;
     padding-top: 2rem;
     /* height: 100vh; */
-    min-height: 100vh;
-    background-image: linear-gradient(var(--main-bg-color), var(--mid-gradient));
+    /* min-height: 100vh; */
+    /* background-image: linear-gradient(var(--main-bg-color), var(--mid-gradient)); */
 }
 
 .about-page{
     /* height: 100vh; */
     min-height: 100vh;
+    margin-top: 210vh;
     background-image: linear-gradient(var(--mid-gradient), var(--end-gradient));
 }
 
@@ -215,6 +216,10 @@ body{
 
 .links:visited{
     color: var(--link-color);
+}
+
+.about-page {
+    background: var(--main-bg-color);
 }
 
 @keyframes reveal {
