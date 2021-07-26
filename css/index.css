@@ -22,6 +22,17 @@ body{
     overflow-x: hidden;
 }
 
+.main-wrapper {
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+}
+
 .guy{
     width: 100vw;
     height: 97vh;
@@ -30,10 +41,10 @@ body{
 }
 
 .desktop{
-    width: 100vw;
-    height: 97vh;
+    /* width: 100vw; */
     object-fit: cover;
     position: relative;
+    margin: 0 auto;
 }
 
 .logo{
@@ -102,28 +113,28 @@ body{
 .projects-page{
     margin-top: 2rem;
     padding-top: 2rem;
-    /* height: 100vh; */
+    height: 120vh;
     /* min-height: 100vh; */
     /* background-image: linear-gradient(var(--main-bg-color), var(--mid-gradient)); */
 }
 
 .about-page{
     /* height: 100vh; */
-    min-height: 100vh;
-    margin-top: 210vh;
+    /* margin-top: 210vh; */
     background-image: linear-gradient(var(--mid-gradient), var(--end-gradient));
 }
 
 .card-content {
     position: relative;
     width: content;
+    /* flex-basis: 50%; */
 }
 
 .front-image {
     height: 0 auto;
     border: 1px solid black;
     border-collapse: collapse;
-    max-width: 500px;
+    max-width: 75%;
     aspect-ratio: 16 / 9;    
 }
 
@@ -147,7 +158,7 @@ body{
     position: relative;
     text-align: center;
     padding: 0px 4px;
-    min-height: 50px;
+    /* min-height: 50px; */
 }
 
 .front-title::after{
@@ -234,6 +245,12 @@ body{
     }
 }
 
+@media only screen and (max-width: 1270px){
+    .projects-page{
+        height: 180vh;
+    }
+}
+
 @media only screen and (max-width: 1200px){
     .projects, .about {
         font-size: 2rem;
@@ -286,6 +303,12 @@ body{
      
     .projects {
         left: 2vw;
+    }
+}
+
+@media only screen and (max-width: 851px){
+    .projects-page {
+        height: 300vh;
     }
 }
 
