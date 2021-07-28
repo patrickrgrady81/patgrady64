@@ -113,6 +113,7 @@ body{
 
 .projects, .about {
     position: absolute;
+    cursor: pointer;
     color: var(--second-font-color);
     font-size: 3rem;
     box-shadow: 15px 5px 15px 5px #000000;
@@ -196,6 +197,7 @@ body{
     /* position: relative; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 2px solid black;
     max-width: 400px;
     min-height: 300px;
