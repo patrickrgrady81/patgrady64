@@ -19,7 +19,18 @@ body{
     
     background-color: var(--main-bg-color);
     display: relative;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+    height: auto;
+}
+
+#wave {
+    position: absolute;
+    z-index: 3;
+    object-fit: contain;
+    width: 120vw;
+    top: -150px;
+    opacity: 40%;
+    left: -10px;
 }
 
 .hamburger {
@@ -69,6 +80,7 @@ body{
     font-weight: bolder;
     overflow: hidden;
     white-space: nowrap;
+    z-index: 4;
 }
 
 .title{
@@ -80,6 +92,7 @@ body{
     font-size: 2rem;
     opacity: 0.6;
     white-space: nowrap;
+    z-index: 5;
 }
 
 /* .logo, .title{
@@ -126,20 +139,11 @@ body{
     margin-top: 2rem;
     padding-top: 2rem;
     height: 120vh;
-    /* min-height: 100vh; */
-    /* background-image: linear-gradient(var(--main-bg-color), var(--mid-gradient)); */
-}
-
-.about-page{
-    /* height: 100vh; */
-    /* margin-top: 210vh; */
-    background-image: linear-gradient(var(--mid-gradient), var(--end-gradient));
 }
 
 .card-content {
     position: relative;
     width: content;
-    /* flex-basis: 50%; */
 }
 
 .front-image {
@@ -149,14 +153,6 @@ body{
     max-width: 75%;
     aspect-ratio: 16 / 9;    
 }
-
-/* .front-parent{
-    transition: transform 1s ease-out;
-}
-
-.front-parent:hover, .front-parent:active{
-    transform: rotateY(.5turn);
-} */
 
 .front-title {
     text-align: center;
@@ -243,6 +239,53 @@ body{
 
 .about-page {
     background: var(--main-bg-color);
+    margin-top: 40px;
+    position: relative;
+}
+
+#funny-face {
+    width: 300px;
+    position: absolute;
+    left: 62vw;
+    top: 300px;
+}
+
+#speach-bubble{
+    display: block;
+    width: 500px;
+    top: 100px;
+    left: 10vw;
+    margin: 0 auto;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon{
+    position: absolute;
+    width: 60px;
+}
+
+#resume, #github, #in {
+    top: 100px;
+}
+
+#resume:hover, #github:hover, #in:hover {
+    cursor: pointer;
+}
+
+#resume{
+    left: 37vw;
+}
+
+#github{
+    left: 47vw;
+}
+
+#in{
+    left: 57vw;
 }
 
 @keyframes reveal {
@@ -260,6 +303,14 @@ body{
 @media only screen and (max-width: 1270px){
     .projects-page{
         height: 180vh;
+    }
+
+    #about-page{
+        margin-top: 100px;
+    }
+
+    #resume, #github, #in {
+        top: 130px;
     }
 }
 
@@ -389,5 +440,107 @@ body{
     .switch #bar2 {
         transform: rotateZ(-45deg);
         z-index: 2;
+    }
+
+    #about-page{
+        margin-top: 120px;
+    }
+}
+
+@media only screen and (max-width: 851px){
+
+    #speach-bubble{
+        margin: 0;
+        position: relative;
+        top: 7vh;
+        left: 10vw;
+        width: 400px;
+    }
+
+    #resume, #github, #in {
+        top: 143px;
+        z-index: 5;
+    }
+
+    #resume{
+        left: 17vw
+    }
+
+    #github{
+        left: 29vw;
+    }
+
+    #in{
+        left: 40vw;
+    }
+
+    #funny-face{
+        left: 44vw;
+    }
+}
+@media only screen and (max-width: 630px){
+
+    #speach-bubble{
+        margin: 0;
+        position: relative;
+        top: 7vh;
+        left: 1vw;
+        width: 400px;
+    }
+
+    #resume, #github, #in {
+        top: 143px;
+        z-index: 5;
+    }
+
+    #resume{
+        left: 8vw
+    }
+
+    #github{
+        left: 24vw;
+    }
+
+    #in{
+        left: 40vw;
+    }
+
+    #funny-face{
+        left: 50vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #speach-bubble{
+        margin: 0;
+        position: relative;
+        top: 7vh;
+        left: 1vw;
+        width: 330px;
+    }
+
+    #funny-face{
+        width: 200px;
+    }
+
+    #resume, #github, #in {
+        top: 125px;
+        z-index: 5;
+    }
+
+    #resume{
+        left: 12vw
+    }
+
+    #github{
+        left: 31vw;
+    }
+
+    #in{
+        left: 50vw;
+    }
+
+    #funny-face{
+        left: 50vw;
     }
 }
