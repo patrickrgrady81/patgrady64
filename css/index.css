@@ -41,6 +41,7 @@ body{
     display: none;
     margin: 20px 20px 0 20px;
     cursor: pointer;
+    margin: 5.5vh 6vh 0 0;
 }
 
 .hamburger-wrapper{
@@ -114,6 +115,10 @@ body{
   --animate-duration: 3s;
 }
 
+.hamburger-nav{
+    transition: 2s;
+}
+
 .projects{
     top: 22vh;
     left: 1.7vw;
@@ -155,7 +160,6 @@ body{
     margin-top: 2rem;
     padding-top: 2rem;
     height: 120vh;
-    background: white;
 }
 
 .card-content {
