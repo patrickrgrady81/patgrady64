@@ -4,7 +4,7 @@
     }
 
     #about-page{
-        margin-top: 100px;
+        margin-top: 190px;
     }
 
     #resume, #github, #in {
@@ -164,6 +164,10 @@
 
     .langs{
         margin-top: 150px;
+    }
+
+    #about-page{
+        margin-top: 190px;
     }
 }
 
