@@ -69,6 +69,20 @@ const data = [
     front: "https://github.com/patrickrgrady81/Snake",
     image: "PaddySnake.png",
   },
+  {
+    id: 5,
+    type: "Project",
+    idName: "Peeker",
+    name: "Peeker",
+    briefDesc: "Video Poker",
+    fullDescription: "This project is still in development. Try your luck with this video poker game. Bet up to 5 credits, discard the ones you don't want and try to get the best hand. Good Luck!",
+    languages: ["HTML", "CSS", "React"],
+    demoBack: null,
+    demoFront: "https://patrickrgrady81.github.io/Peeker-front/",
+    back: null,
+    front: "https://github.com/patrickrgrady81/peeker",
+    image: "Peeker.png",
+  },
 ]
 
 export default data
